@@ -95,9 +95,9 @@ const Register = () => {
                 />
 
                
-                <Box sx={{ display: 'flex', justifyContent: "flex-end", width: '100%' }}>
+                <Box sx={{ display: 'flex', justifyContent: "flex-end", width: '100%',alignItems:"center" }}>
                     <Typography fontSize={12}>Already have an account?</Typography>
-                    <Button onClick={() => navigate("/login")}>Login</Button>
+                    <Button type="button" onClick={() => navigate("/login")}>Login</Button>
                 </Box>
 
                 <Divider sx={{ width: "70%" }} />

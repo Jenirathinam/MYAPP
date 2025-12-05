@@ -4,10 +4,14 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
     plugins: [
-        react(), // IMPORTANT - put before laravel
+        react(), 
         laravel({
             input: 'resources/js/app.jsx',
             refresh: true,
         }),
+        
     ],
+     server: {
+    historyApiFallback: true,
+  },
 });

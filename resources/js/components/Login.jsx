@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Button, TextField, Typography, Box, Alert } from "@mui/material";
-import LoginIcon from "@mui/icons-material/Login";
+import { Button, TextField, Typography, Box, Alert, Divider } from "@mui/material";
+
 
 import { useNavigate } from "react-router-dom";
 
@@ -12,7 +12,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
   const submit = async (e) => {
     e.preventDefault();
 
@@ -65,7 +65,11 @@ const navigate = useNavigate();
         fullWidth
         required
       />
-
+      <Box sx={{ display: 'flex', justifyContent: "flex-end", width: '100%' ,alignItems:"center" }}>
+        <Typography fontSize={12}> Already have an account?</Typography>
+        <Button onClick={() => navigate("/")}>Register</Button>
+      </Box>
+      <Divider sx={{ width: "1000%" }} />
       <Button type="submit" variant="contained" color="primary" fullWidth>
         Login
       </Button>
